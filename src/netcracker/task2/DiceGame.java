@@ -12,6 +12,9 @@ public class DiceGame {
     private final int diceNum;
 
     public DiceGame(int players, int diceNum){
+        if (players == 0){
+            throw new IllegalArgumentException("Illegal Number Of Players");
+        }
         score = new int[players];
         this.players = players;
         this.diceNum = diceNum;
